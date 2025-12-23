@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -16,6 +18,8 @@ const nextConfig = {
       },
     ],
   },
+  // Uncomment the following line if deploying to a repository sub-path (e.g. /FoodZilla)
+  // basePath: '/FoodZilla',
 };
 
 export default nextConfig;
