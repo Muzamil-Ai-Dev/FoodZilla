@@ -1,0 +1,29 @@
+PROJECT SUBMISSION: FOODZILLA - MODERN FOOD DELIVERY PLATFORM
+
+PROJECT OVERVIEW
+FoodZilla is a high-performance, responsive food delivery web application inspired by platforms like Foodpanda. It provides a seamless user journey from restaurant discovery and menu customization to a secure checkout flow and personal order history management.
+
+DEVELOPMENT METHODOLOGY
+This project was built using Spec-Driven Development (SDD) with the assistance of Spec-Kit-Plus and the Gemini CLI agent.
+
+- Spec-Kit-Plus: Used to maintain high code quality by ensuring every feature was first defined in a technical specification, planned architecturally, and broken down into testable tasks.
+- Gemini CLI: Acted as an intelligent development partner to execute implementation, manage security patches, and ensure the project adhered to strict architectural standards.
+
+TECHNICAL STACK
+- Framework: Next.js 14 (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- Animations: Framer Motion
+- State Management: Zustand (with persistence for Cart and Auth states)
+- Icons: Lucide React
+
+KEY FEATURES IMPLEMENTED
+1. Restaurant Discovery: Dynamic restaurant listing with category filtering and real-time search functionality.
+2. Persistent Cart System: A sliding Cart Drawer that handles single-restaurant constraints and saves items locally so they survive page refreshes.
+3. Advanced Checkout Flow: A guarded checkout process including address selection, payment method mocking, and a detailed order summary.
+4. Order History and Profile: A dedicated user account section to track current orders and view past transaction history.
+5. Marketing Suite: Fully responsive About, Careers, and Partner pages.
+6. Security: Zero-vulnerability dependency management with updated Next.js security patches.
+
+CONCLUSION
+By combining modern web technologies with AI-assisted Spec-Driven Development, FoodZilla demonstrates a scalable and maintainable architecture ready for production-grade deployment.

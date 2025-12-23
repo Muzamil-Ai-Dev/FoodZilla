@@ -141,12 +141,13 @@ export default function AboutPage() {
                <FadeIn delay={0.3} className="h-full">
                  <div className="relative w-full h-full rounded-[4rem] overflow-hidden shadow-2xl border-4 border-white/10 group">
                     <Image 
-                      src="https://images.unsplash.com/photo-1580674271209-40b49a5a0f7f?auto=format&fit=crop&q=80&w=1200"
+                      src="https://images.unsplash.com/photo-1451187530230-b23b99443925?auto=format&fit=crop&q=80&w=1200"
                       alt="Advanced Logistics Tech"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-1000"
                       priority
                       unoptimized
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent" />
                     
