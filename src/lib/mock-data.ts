@@ -5,18 +5,18 @@ export const MOCK_USER: User = {
   id: "u1",
   name: "John Doe",
   email: "john@example.com",
-  avatarUrl: getMockImage("user"),
+  avatarUrl: getMockImage("user", "small"),
 };
 
 export const MOCK_CATEGORIES: Category[] = [
-  { id: "c1", name: "Burgers", slug: "burgers", imageUrl: getMockImage("burger") },
-  { id: "c2", name: "Pizza", slug: "pizza", imageUrl: getMockImage("pizza") },
-  { id: "c3", name: "Sushi", slug: "sushi", imageUrl: getMockImage("sushi") },
-  { id: "c4", name: "Asian", slug: "asian", imageUrl: getMockImage("asian") },
-  { id: "c5", name: "Desserts", slug: "desserts", imageUrl: getMockImage("dessert") },
-  { id: "c6", name: "Mexican", slug: "mexican", imageUrl: getMockImage("mexican") },
-  { id: "c7", name: "Coffee", slug: "coffee", imageUrl: getMockImage("coffee") },
-  { id: "c8", name: "Healthy", slug: "healthy", imageUrl: getMockImage("restaurant") },
+  { id: "c1", name: "Burgers", slug: "burgers", imageUrl: getMockImage("burger", "small") },
+  { id: "c2", name: "Pizza", slug: "pizza", imageUrl: getMockImage("pizza", "small") },
+  { id: "c3", name: "Sushi", slug: "sushi", imageUrl: getMockImage("sushi", "small") },
+  { id: "c4", name: "Asian", slug: "asian", imageUrl: getMockImage("asian", "small") },
+  { id: "c5", name: "Desserts", slug: "desserts", imageUrl: getMockImage("dessert", "small") },
+  { id: "c6", name: "Mexican", slug: "mexican", imageUrl: getMockImage("mexican", "small") },
+  { id: "c7", name: "Coffee", slug: "coffee", imageUrl: getMockImage("coffee", "small") },
+  { id: "c8", name: "Healthy", slug: "healthy", imageUrl: getMockImage("restaurant", "small") },
 ];
 
 export const MOCK_RESTAURANTS: Restaurant[] = [
@@ -237,7 +237,7 @@ export const MOCK_RESTAURANTS_EXTENDED: RestaurantExtended[] = MOCK_RESTAURANTS.
           name: "Signature Burger",
           description: "Our world famous signature burger with special sauce and prime beef.",
           price: 12.99,
-          image: getMockImage("burger"),
+          image: getMockImage("burger", "small"),
           isPopular: true,
           calories: 850,
           optionGroups: [MOCK_OPTIONS.sizes, MOCK_OPTIONS.extras]
@@ -247,7 +247,7 @@ export const MOCK_RESTAURANTS_EXTENDED: RestaurantExtended[] = MOCK_RESTAURANTS.
           name: "Crispy Fries",
           description: "Golden and crispy fries seasoned with sea salt.",
           price: 4.50,
-          image: getMockImage("burger"),
+          image: getMockImage("burger", "small"),
           isVegetarian: true,
           calories: 320
         }
@@ -262,7 +262,7 @@ export const MOCK_RESTAURANTS_EXTENDED: RestaurantExtended[] = MOCK_RESTAURANTS.
           name: "Spicy Zilla Chicken",
           description: "Tender chicken breast with our secret spicy glaze.",
           price: 15.50,
-          image: getMockImage("asian"),
+          image: getMockImage("asian", "small"),
           spicyLevel: 2,
           calories: 600,
           optionGroups: [MOCK_OPTIONS.extras]
@@ -272,7 +272,7 @@ export const MOCK_RESTAURANTS_EXTENDED: RestaurantExtended[] = MOCK_RESTAURANTS.
           name: "Garden Fresh Salad",
           description: "Organic greens, cherry tomatoes, and cucumber with balsamic vinaigrette.",
           price: 9.99,
-          image: getMockImage("restaurant"),
+          image: getMockImage("restaurant", "small"),
           isVegetarian: true,
           calories: 150
         }

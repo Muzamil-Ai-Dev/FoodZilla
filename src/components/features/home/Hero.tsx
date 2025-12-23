@@ -28,7 +28,7 @@ export const Hero = () => {
           preload="none"
         >
           {/* Using a lighter HD version instead of UHD if possible, but keeping original for now with better loading strategy */}
-          <source src="https://videos.pexels.com/video-files/2928892/2928892-uhd_2560_1440_24fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/2928892/2928892-hd_1280_720_24fps.mp4" type="video/mp4" />
           <Image
             src={getMockImage("video_fallback")}
             alt="Hero background"
