@@ -10,6 +10,12 @@ import { MenuSection } from "@/components/features/restaurant/MenuSection";
 import { ItemModal } from "@/components/features/restaurant/ItemModal";
 import { ShoppingBag } from "lucide-react";
 
+export function generateStaticParams() {
+  return MOCK_RESTAURANTS_EXTENDED.map((restaurant) => ({
+    slug: restaurant.slug,
+  }));
+}
+
 export default function RestaurantDetailPage() {
   const { slug } = useParams();
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
