@@ -88,7 +88,7 @@ export default function Home() {
                   <Link 
                     key={location.name} 
                     href={`/search?q=${location.name.toLowerCase()}`}
-                    className="group flex flex-col items-center rounded-[2rem] bg-white hover:bg-white transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden h-[300px] relative"
+                    className="group flex flex-col items-center rounded-[2rem] bg-white hover:bg-white transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden h-64 md:h-[300px] relative"
                   >
                      <Image 
                         src={location.image}

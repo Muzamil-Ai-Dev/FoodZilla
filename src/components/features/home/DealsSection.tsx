@@ -49,7 +49,7 @@ export const DealsSection = () => {
           {DEALS.map((deal) => (
             <div 
               key={deal.id} 
-              className={`relative overflow-hidden rounded-[2.5rem] p-8 h-72 flex flex-col justify-center ${deal.color} group cursor-pointer shadow-xl shadow-black/5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500`}
+              className={`relative overflow-hidden rounded-[2.5rem] p-8 h-64 md:h-72 flex flex-col justify-center ${deal.color} group cursor-pointer shadow-xl shadow-black/5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500`}
             >
               <div className="relative z-10 max-w-[65%]">
                 <h3 className={`text-3xl font-black mb-3 ${deal.textColor} leading-tight tracking-tight`}>
