@@ -38,7 +38,7 @@ Provide users with a dedicated space to view their previous orders, track curren
   ```
 
 ## 4. Acceptance Criteria
-- [ ] `/account/orders` page displays at least 3 mock past orders.
-- [ ] Status badges use appropriate colors (Green for delivered, Yellow for processing).
-- [ ] "Reorder" button functionality is mocked or implemented.
-- [ ] Profile page displays current user data from `useAuthStore`.
+- [x] `/account/orders` page displays at least 3 mock past orders.
+- [x] Status badges use appropriate colors (Green for delivered, Yellow for processing).
+- [x] "Reorder" button functionality is mocked or implemented.
+- [x] Profile page displays current user data from `useAuthStore`.
