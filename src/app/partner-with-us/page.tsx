@@ -131,13 +131,13 @@ export default function PartnerPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 relative z-10">
               {steps.map((step, index) => (
-                <FadeIn key={index} delay={index * 0.1}>
-                  <div className="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                <FadeIn key={index} delay={index * 0.1} className="h-full">
+                  <div className="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 group h-full flex flex-col">
                     <div className="text-4xl font-black text-brand-primary/20 mb-6 group-hover:text-brand-primary transition-colors italic">
                       {step.number}
                     </div>
                     <h4 className="text-xl font-black text-brand-dark mb-3 uppercase">{step.title}</h4>
-                    <p className="text-sm text-gray-500 font-medium leading-relaxed">{step.description}</p>
+                    <p className="text-sm text-gray-500 font-medium leading-relaxed flex-1">{step.description}</p>
                   </div>
                 </FadeIn>
               ))}
@@ -220,11 +220,11 @@ export default function PartnerPage() {
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {PARTNER_TESTIMONIALS.map((testimonial, index) => (
-              <FadeIn key={testimonial.id} delay={index * 0.2}>
-                <div className="bg-gray-50 p-10 rounded-[3rem] border border-gray-100 relative group hover:-translate-y-2 transition-all duration-500">
+              <FadeIn key={testimonial.id} delay={index * 0.2} className="h-full">
+                <div className="bg-gray-50 p-10 rounded-[3rem] border border-gray-100 relative group hover:-translate-y-2 transition-all duration-500 h-full flex flex-col">
                   <div className="text-6xl text-brand-primary/10 font-serif absolute top-6 right-10 leading-none">&quot;</div>
                   <div className="flex items-center gap-6 mb-8">
-                    <div className="relative w-20 h-20 rounded-[2rem] overflow-hidden border-4 border-white shadow-lg">
+                    <div className="relative w-20 h-20 rounded-[2rem] overflow-hidden border-4 border-white shadow-lg flex-shrink-0">
                       <Image
                         src={testimonial.image}
                         alt={testimonial.name}
@@ -237,7 +237,7 @@ export default function PartnerPage() {
                       <p className="text-sm text-brand-primary font-bold">{testimonial.restaurant}</p>
                     </div>
                   </div>
-                  <p className="text-xl italic text-gray-600 leading-relaxed font-medium">&quot;{testimonial.quote}&quot;</p>
+                  <p className="text-xl italic text-gray-600 leading-relaxed font-medium flex-1">&quot;{testimonial.quote}&quot;</p>
                 </div>
               </FadeIn>
             ))}
