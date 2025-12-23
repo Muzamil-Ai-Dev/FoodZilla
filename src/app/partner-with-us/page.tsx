@@ -198,12 +198,34 @@ export default function PartnerPage() {
               </div>
             </div>
 
-            <div className="flex-1 relative w-full h-[400px] md:h-[500px]">
-               <FadeIn delay={0.4}>
-                 <div className="bg-gradient-to-br from-brand-primary/20 to-transparent p-8 rounded-[4rem] h-full flex items-center justify-center border border-white/10">
-                    <Smartphone className="w-48 h-48 text-brand-primary animate-pulse" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                       <Zap className="w-12 h-12 text-white" />
+            <div className="flex-1 relative w-full h-[400px] md:h-[600px]">
+               <FadeIn delay={0.4} className="h-full">
+                 <div className="relative w-full h-full rounded-[4rem] overflow-hidden shadow-2xl border-4 border-white/10 group">
+                    <Image 
+                      src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200"
+                      alt="Restaurant Management Tablet"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-1000"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent" />
+                    
+                    {/* Floating Dashboard Card */}
+                    <div className="absolute top-10 right-10 left-10 md:left-auto md:w-64 bg-white/95 backdrop-blur-md p-6 rounded-[2rem] shadow-2xl border border-white/20 animate-in zoom-in duration-700">
+                       <div className="flex items-center gap-3 mb-4">
+                          <div className="bg-brand-primary p-2 rounded-xl">
+                             <TrendingUp className="w-5 h-5 text-white" />
+                          </div>
+                          <span className="font-black text-brand-dark uppercase tracking-widest text-[10px]">Live Growth</span>
+                       </div>
+                       <div className="space-y-4">
+                          <div>
+                             <div className="text-3xl font-black text-brand-dark">+142%</div>
+                             <div className="text-[10px] text-gray-400 font-bold uppercase">Order Volume This Month</div>
+                          </div>
+                          <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
+                             <div className="h-full w-3/4 bg-brand-primary rounded-full animate-in slide-in-from-left duration-1000" />
+                          </div>
+                       </div>
                     </div>
                  </div>
                </FadeIn>

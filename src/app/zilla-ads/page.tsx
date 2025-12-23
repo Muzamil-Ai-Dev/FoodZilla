@@ -4,7 +4,7 @@ import { PageHero } from "@/components/marketing/PageHero";
 import { Button } from "@/components/ui/button";
 import { ContentSection } from "@/components/marketing/ContentSection";
 import { FadeIn } from "@/components/ui/fade-in";
-import { BarChart3, Target, MousePointer2, Megaphone, CheckCircle2, ArrowRight, Smartphone, Zap, Percent } from "lucide-react";
+import { BarChart3, Target, MousePointer2, Megaphone, CheckCircle2, ArrowRight, Smartphone, Zap, Percent, TrendingUp } from "lucide-react";
 
 export default function ZillaAdsPage() {
   const adTypes = [
@@ -159,21 +159,39 @@ export default function ZillaAdsPage() {
               </div>
             </div>
 
-            <div className="flex-1 relative w-full h-[400px] md:h-[500px]">
-               <FadeIn delay={0.4}>
-                 <div className="bg-gradient-to-br from-brand-primary/20 to-transparent p-12 rounded-[4rem] h-full flex items-center justify-center border border-white/10 relative">
-                    <div className="bg-white/5 p-8 rounded-[3rem] backdrop-blur-xl border border-white/10 w-full">
-                       <div className="flex items-center justify-between mb-8">
-                          <div className="h-4 w-32 bg-white/20 rounded-full" />
-                          <div className="h-8 w-8 bg-brand-primary rounded-xl" />
+            <div className="flex-1 relative w-full h-[500px] md:h-[600px]">
+               <FadeIn delay={0.4} className="h-full">
+                 <div className="relative w-full h-full rounded-[4rem] overflow-hidden shadow-2xl border-4 border-white/10 group">
+                    <Image 
+                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200"
+                      alt="Advertising Analytics Dashboard"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-1000"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent" />
+                    
+                    {/* Floating Conversion Card */}
+                    <div className="absolute bottom-10 left-10 right-10 bg-brand-dark/90 backdrop-blur-xl border border-white/10 p-8 rounded-[2.5rem] shadow-2xl animate-in slide-in-from-bottom-10 duration-700">
+                       <div className="flex items-center justify-between mb-6">
+                          <div className="flex items-center gap-3">
+                             <div className="bg-brand-primary p-2 rounded-xl">
+                                <Zap className="w-5 h-5 text-white" />
+                             </div>
+                             <span className="font-black text-white uppercase tracking-widest text-xs">Ad Performance</span>
+                          </div>
+                          <span className="text-green-400 font-black text-xs uppercase tracking-widest">Active Now</span>
                        </div>
-                       <div className="space-y-4">
-                          <div className="h-24 w-full bg-brand-primary/10 rounded-2xl animate-pulse" />
-                          <div className="h-4 w-full bg-white/10 rounded-full" />
-                          <div className="h-4 w-2/3 bg-white/10 rounded-full" />
+                       <div className="grid grid-cols-2 gap-8">
+                          <div>
+                             <div className="text-3xl font-black text-white">4.8x</div>
+                             <div className="text-[10px] text-gray-400 font-bold uppercase mt-1">Average ROI</div>
+                          </div>
+                          <div>
+                             <div className="text-3xl font-black text-brand-primary">+320%</div>
+                             <div className="text-[10px] text-gray-400 font-bold uppercase mt-1">Customer Reach</div>
+                          </div>
                        </div>
                     </div>
-                    <Smartphone className="absolute -bottom-10 -right-10 w-64 h-64 text-brand-primary/20 -z-10" />
                  </div>
                </FadeIn>
             </div>

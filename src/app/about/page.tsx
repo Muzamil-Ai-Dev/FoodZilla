@@ -5,7 +5,7 @@ import { PageHero } from "@/components/marketing/PageHero";
 import { ContentSection } from "@/components/marketing/ContentSection";
 import { TEAM_MEMBERS } from "@/lib/marketing-data";
 import { FadeIn } from "@/components/ui/fade-in";
-import { Clock, Leaf, Heart, Users, TrendingUp, Award, ArrowRight } from "lucide-react";
+import { Clock, Leaf, Heart, Users, TrendingUp, Award, ArrowRight, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function AboutPage() {
@@ -138,15 +138,35 @@ export default function AboutPage() {
             </div>
             
             <div className="flex-1 relative w-full h-[400px] md:h-[600px]">
-               <FadeIn delay={0.3}>
-                 <div className="relative w-full h-full rounded-[4rem] overflow-hidden shadow-2xl border-4 border-white/10">
+               <FadeIn delay={0.3} className="h-full">
+                 <div className="relative w-full h-full rounded-[4rem] overflow-hidden shadow-2xl border-4 border-white/10 group">
                     <Image 
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000"
-                      alt="Data visualization"
+                      src="https://images.unsplash.com/photo-1580674271209-40b49a5a0f7f?auto=format&fit=crop&q=80&w=1200"
+                      alt="Advanced Logistics Tech"
                       fill
-                      className="object-cover opacity-80"
+                      className="object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent" />
+                    
+                    {/* Floating Tech Card */}
+                    <div className="absolute bottom-10 left-10 right-10 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-3xl animate-in slide-in-from-bottom-5 duration-700">
+                       <div className="flex items-center gap-4 mb-4">
+                          <div className="bg-brand-primary p-2 rounded-lg">
+                             <Zap className="w-5 h-5 text-white" />
+                          </div>
+                          <span className="font-black uppercase tracking-widest text-xs">System Performance</span>
+                       </div>
+                       <div className="grid grid-cols-2 gap-4">
+                          <div>
+                             <div className="text-2xl font-black text-white">0.2s</div>
+                             <div className="text-[10px] text-gray-400 font-bold uppercase">Dispatch Latency</div>
+                          </div>
+                          <div>
+                             <div className="text-2xl font-black text-brand-primary">99.9%</div>
+                             <div className="text-[10px] text-gray-400 font-bold uppercase">Uptime Reliability</div>
+                          </div>
+                       </div>
+                    </div>
                  </div>
                </FadeIn>
             </div>
