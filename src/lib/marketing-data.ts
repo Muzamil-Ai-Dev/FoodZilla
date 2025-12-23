@@ -62,6 +62,22 @@ export const NEWS_ARTICLES = [
     summary: "Split the bill, not the friendship. Order together with friends in real-time.",
     image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&q=80&w=600",
   },
+  {
+    id: 5,
+    title: "How AI is Revolutionizing Your Delivery",
+    date: "Aug 20, 2025",
+    category: "Product",
+    summary: "Behind the scenes of our new dispatching engine that cut delivery times by 15%.",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600",
+  },
+  {
+    id: 6,
+    title: "Annual Impact Report: 2024 Highlights",
+    date: "July 12, 2025",
+    category: "Press",
+    summary: "Reflecting on a year of growth, sustainability milestones, and community support.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
+  },
 ];
 
 export const JOBS = [
