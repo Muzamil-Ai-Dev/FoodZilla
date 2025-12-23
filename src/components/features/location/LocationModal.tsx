@@ -57,29 +57,29 @@ export const LocationModal = () => {
             <input
               type="text"
               placeholder="Search for street, city, or area..."
-              className="w-full pl-10 pr-4 py-3 bg-brand-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
+              className="w-full pl-10 pr-4 py-3 bg-brand-secondary dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/20 placeholder:text-gray-400 dark:placeholder:text-gray-500"
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
             />
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 w-5 h-5" />
           </div>
 
           {/* Current Location Button */}
           <Button 
             variant="outline" 
-            className="w-full justify-start gap-3 py-6 rounded-xl border-gray-100 hover:bg-brand-secondary"
+            className="w-full justify-start gap-3 py-6 rounded-xl border-gray-100 dark:border-gray-700 hover:bg-brand-secondary dark:hover:bg-gray-800 text-brand-dark dark:text-white"
             onClick={handleCurrentLocation}
           >
             <Navigation className="w-5 h-5 text-brand-primary" />
             <div className="text-left">
               <div className="font-semibold text-sm">Use current location</div>
-              <div className="text-xs text-gray-500">Enable location access for better results</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Enable location access for better results</div>
             </div>
           </Button>
 
           {/* Suggestions */}
           <div className="space-y-2">
-            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
+            <h4 className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3">
               Suggestions
             </h4>
             {mockSuggestions.length > 0 ? (
@@ -87,10 +87,10 @@ export const LocationModal = () => {
                 <button
                   key={suggestion}
                   onClick={() => handleSelectLocation(suggestion)}
-                  className="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-brand-secondary transition-colors text-left"
+                  className="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-brand-secondary dark:hover:bg-gray-800 transition-colors text-left"
                 >
-                  <MapPin className="w-5 h-5 text-gray-400" />
-                  <span className="text-sm font-medium">{suggestion}</span>
+                  <MapPin className="w-5 h-5 text-gray-400 dark:text-gray-500" />
+                  <span className="text-sm font-medium text-brand-dark dark:text-gray-200">{suggestion}</span>
                 </button>
               ))
             ) : (

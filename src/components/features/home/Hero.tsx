@@ -12,7 +12,7 @@ export const Hero = () => {
   const currentLocation = useLocationStore((state) => state.currentLocation);
 
   return (
-    <section className="relative h-[500px] md:h-[650px] flex items-center overflow-hidden bg-gray-50">
+    <section className="relative h-[500px] md:h-[650px] flex items-center overflow-hidden bg-gray-50 dark:bg-gray-950 transition-colors">
       {/* Background Image - Clean and Minimal */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -20,35 +20,35 @@ export const Hero = () => {
           alt="Hero background"
           fill
           priority
-          className="object-cover opacity-90"
+          className="object-cover opacity-90 dark:opacity-60"
           sizes="100vw"
           unoptimized
         />
         {/* Subtle Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-transparent to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/40 dark:from-black/60 via-transparent to-transparent z-10" />
       </div>
 
       <Container className="relative z-20 w-full py-12 md:py-0">
-        <div className="max-w-2xl bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-[3rem] shadow-2xl border border-white/20">
-          <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight text-brand-dark uppercase italic tracking-tighter">
+        <div className="max-w-2xl bg-white/95 dark:bg-gray-900/95 backdrop-blur-md p-8 md:p-12 rounded-[3rem] shadow-2xl border border-white/20 dark:border-gray-800">
+          <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight text-brand-dark dark:text-white uppercase italic tracking-tighter">
             It&apos;s the food you love, <br />
             <span className="text-brand-primary">delivered.</span>
           </h1>
           
           <div className="space-y-4">
-            <p className="text-sm font-bold text-gray-400 uppercase tracking-widest ml-2">Enter your delivery address</p>
-            <div className="bg-gray-50 p-2 rounded-2xl flex flex-col md:flex-row gap-3 border border-gray-100">
+            <p className="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest ml-2">Enter your delivery address</p>
+            <div className="bg-gray-50 dark:bg-gray-800 p-2 rounded-2xl flex flex-col md:flex-row gap-3 border border-gray-100 dark:border-gray-700">
               <button
                 onClick={() => setLocationModalOpen(true)}
-                className="flex-1 flex items-center gap-4 px-6 py-4 text-brand-dark hover:bg-white transition-all text-left rounded-xl group min-w-0"
+                className="flex-1 flex items-center gap-4 px-6 py-4 text-brand-dark dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-all text-left rounded-xl group min-w-0"
               >
-                <div className="bg-brand-primary/10 p-2 rounded-full flex-shrink-0">
+                <div className="bg-brand-primary/10 dark:bg-brand-primary/20 p-2 rounded-full flex-shrink-0">
                   <MapPin className="w-5 h-5 text-brand-primary group-hover:scale-110 transition-transform" />
                 </div>
                 <div className="flex-1 overflow-hidden">
                   <span 
                     suppressHydrationWarning
-                    className="block truncate font-bold text-brand-dark text-lg"
+                    className="block truncate font-bold text-brand-dark dark:text-white text-lg"
                   >
                     {currentLocation?.address || "Enter your delivery address"}
                   </span>
@@ -69,4 +69,3 @@ export const Hero = () => {
     </section>
   );
 };
-

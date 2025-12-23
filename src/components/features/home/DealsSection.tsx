@@ -33,12 +33,12 @@ const DEALS = [
 
 export const DealsSection = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white dark:bg-gray-950 transition-colors">
       <Container>
         <div className="flex items-center justify-between mb-10">
           <div>
-            <h2 className="text-3xl font-bold text-brand-dark">Your Daily Deals</h2>
-            <p className="text-gray-500 mt-1">Handpicked discounts just for you</p>
+            <h2 className="text-3xl font-bold text-brand-dark dark:text-white">Your Daily Deals</h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-1">Handpicked discounts just for you</p>
           </div>
           <Link href="/offers" className="text-brand-primary font-bold flex items-center gap-2 group">
             See all <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
