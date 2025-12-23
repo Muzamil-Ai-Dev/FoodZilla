@@ -8,7 +8,7 @@ import { ArticleCard } from "@/components/marketing/ArticleCard";
 import { NEWS_ARTICLES } from "@/lib/marketing-data";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/fade-in";
-import { Download, Mail, MessageCircle, FileText, Share2, ArrowRight } from "lucide-react";
+import { Download, Mail, MessageCircle, FileText, Share2, ArrowRight, Users } from "lucide-react";
 
 const CATEGORIES = ["All", "Press", "Product", "Community"];
 
