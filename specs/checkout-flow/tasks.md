@@ -1,7 +1,7 @@
 # Tasks: Checkout Flow Implementation
 
 ## Phase 1: Cart Core & Persistence
-- [ ] **Task 1: Update `useCartStore` for persistence and restaurant logic**
+- [x] **Task 1: Update `useCartStore` for persistence and restaurant logic**
     - Add `persist` middleware.
     - Implement `restaurantId` check in `addItem`.
     - Add `clearCart` and `getTotal` methods.
@@ -9,7 +9,7 @@
     - *Test Case:* Add item from different restaurant -> Verify constraint logic triggers.
 
 ## Phase 2: UI - Cart Drawer
-- [ ] **Task 2: Implement `CartDrawer` component**
+- [x] **Task 2: Implement `CartDrawer` component**
     - Create `src/components/layout/CartDrawer.tsx` using `framer-motion`.
     - Add item list with quantity controls.
     - Add subtotal and "Checkout" button.
@@ -17,21 +17,21 @@
     - *Test Case:* Clicking cart icon opens drawer; clicking "Checkout" redirects.
 
 ## Phase 3: Checkout Page (`/checkout`)
-- [ ] **Task 3: Scaffold `/checkout` page layout**
+- [x] **Task 4: Scaffold `/checkout` page layout**
     - Create `src/app/checkout/page.tsx`.
     - Implement 2-column layout (Form | Summary).
-- [ ] **Task 4: Implement Selection Sections**
+- [x] **Task 5: Implement Selection Sections**
     - Address selection (Mock saved addresses).
     - Delivery time selection.
     - Payment method selection.
-- [ ] **Task 5: Implement `OrderSummary` component**
+- [x] **Task 6: Implement `OrderSummary` component**
     - Calculate Subtotal, Delivery Fee (mock $2.99), Tax (10%), Total.
     - Enable "Place Order" only when valid.
 
 ## Phase 4: Finalization & Success
-- [ ] **Task 6: Create Success Page**
+- [x] **Task 7: Create Success Page**
     - Create `src/app/checkout/success/page.tsx`.
     - Add confirmation animation and mock Order ID.
-- [ ] **Task 7: Hook up "Place Order"**
+- [x] **Task 8: Hook up "Place Order"**
     - On click: Clear cart -> Redirect to success.
     - *Test Case:* Entire flow from adding item to success page.

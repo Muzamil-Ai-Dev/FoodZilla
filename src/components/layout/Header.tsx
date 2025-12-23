@@ -11,6 +11,7 @@ import { useUIStore } from "@/lib/store/useUIStore";
 import { useLocationStore } from "@/lib/store/useLocationStore";
 import { useAuthStore } from "@/lib/store/useAuthStore";
 import { useSearchStore } from "@/lib/store/useSearchStore";
+import { useCartStore } from "@/lib/store/useCartStore";
 import { cn } from "@/lib/utils";
 import * as Popover from "@radix-ui/react-popover";
 
@@ -26,6 +27,7 @@ export const Header = () => {
   
   const { query, setQuery, setFiltering } = useSearchStore();
   const { isAuthenticated, user, logout } = useAuthStore();
+  const totalItems = useCartStore((state) => state.getTotalItems());
   
   const searchInputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
@@ -169,8 +171,10 @@ export const Header = () => {
                       <Popover.Portal>
                         <Popover.Content className="z-[110] w-64 bg-white rounded-[2rem] p-3 shadow-2xl border border-gray-100 animate-in fade-in zoom-in-95 duration-200" align="end" sideOffset={10}>
                           <div className="px-4 py-3 border-b border-gray-50 mb-2 text-brand-dark font-black truncate">{user?.name}</div>
-                          <Link href="/account"><button className="w-full text-left px-4 py-2.5 rounded-2xl hover:bg-brand-secondary text-sm font-bold text-gray-700 flex items-center gap-3 transition-colors"><Settings className="w-4 h-4"/> Settings</button></Link>
-                          <button onClick={() => { logout(); router.push("/"); }} className="w-full text-left px-4 py-2.5 rounded-2xl hover:bg-red-50 text-sm font-bold text-red-600 flex items-center gap-3 mt-1"><LogOut className="w-4 h-4"/> Logout</button>
+                          <Link href="/account"><button className="w-full text-left px-4 py-2.5 rounded-2xl hover:bg-brand-secondary text-sm font-bold text-gray-700 flex items-center gap-3 transition-colors"><User className="w-4 h-4"/> Profile</button></Link>
+                          <Link href="/account/orders"><button className="w-full text-left px-4 py-2.5 rounded-2xl hover:bg-brand-secondary text-sm font-bold text-gray-700 flex items-center gap-3 transition-colors"><ClipboardList className="w-4 h-4"/> My Orders</button></Link>
+                          <Link href="/account/settings"><button className="w-full text-left px-4 py-2.5 rounded-2xl hover:bg-brand-secondary text-sm font-bold text-gray-700 flex items-center gap-3 transition-colors"><Settings className="w-4 h-4"/> Settings</button></Link>
+                          <button onClick={() => { logout(); router.push("/"); }} className="w-full text-left px-4 py-2.5 rounded-2xl hover:bg-red-50 text-sm font-bold text-red-600 flex items-center gap-3 mt-1 border-t border-gray-50 pt-3"><LogOut className="w-4 h-4"/> Logout</button>
                         </Popover.Content>
                       </Popover.Portal>
                     </Popover.Root>
@@ -185,7 +189,11 @@ export const Header = () => {
                 {/* Cart */}
                 <Button variant="primary" size="icon" className="relative rounded-full w-9 h-9 md:w-10 md:h-10 shadow-sm hover:scale-105 transition-transform flex-shrink-0" onClick={toggleCart}>
                   <ShoppingCart className="w-4 h-4 md:w-5 md:h-5" />
-                  <span className="absolute -top-1 -right-1 bg-brand-dark text-white text-[9px] md:text-[10px] font-bold w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center border-2 border-white shadow-sm">0</span>
+                  {mounted && totalItems > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-brand-dark text-white text-[9px] md:text-[10px] font-bold w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center border-2 border-white shadow-sm animate-in zoom-in duration-300">
+                      {totalItems}
+                    </span>
+                  )}
                 </Button>
               </div>
             </div>

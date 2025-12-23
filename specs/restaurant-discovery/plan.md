@@ -91,8 +91,8 @@ interface CartState {
 - **Filtering Logic**: Complex combinations of filters can be tricky. *Mitigation*: Centralize filter logic in a utility function.
 - **Scroll Syncing**: Category highlighting must be performant. *Mitigation*: Use `IntersectionObserver` instead of raw scroll events.
 
-## Evaluation & Validation
-- [ ] Filters update the UI correctly.
-- [ ] Item Modal "Add to Cart" updates the global store.
-- [ ] Menu navigation pins to top correctly on scroll.
-- [ ] Search returns relevant results debounced.
+## 6. Definition of Done
+- [x] Filters update the UI correctly.
+- [x] Item Modal "Add to Cart" updates the global store.
+- [x] Menu navigation pins to top correctly on scroll.
+- [x] Search returns relevant results debounced.

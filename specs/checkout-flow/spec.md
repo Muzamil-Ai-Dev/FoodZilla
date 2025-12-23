@@ -39,8 +39,8 @@ Manage the transaction process, from reviewing the cart to finalizing the order.
 - **Order**: `{ id, items, total, status, date }`
 
 ## 4. Acceptance Criteria
-- [ ] Cart drawer opens/closes smoothly.
-- [ ] Adding items in Restaurant Detail updates Cart Drawer immediately.
-- [ ] Cart retains state across navigations (Zustand + LocalStorage persistence).
-- [ ] Checkout page displays correct total.
-- [ ] "Place Order" clears the cart and redirects to Success page.
+- [x] Cart drawer opens/closes smoothly.
+- [x] Adding items in Restaurant Detail updates Cart Drawer immediately.
+- [x] Cart retains state across navigations (Zustand + LocalStorage persistence).
+- [x] Checkout page displays correct total.
+- [x] "Place Order" clears the cart and redirects to Success page.

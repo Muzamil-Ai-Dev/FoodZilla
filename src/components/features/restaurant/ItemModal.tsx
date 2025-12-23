@@ -15,6 +15,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { MenuItem, RestaurantExtended } from "@/lib/mock-data";
 import { useCartStore } from "@/lib/store/useCartStore";
+import { useUIStore } from "@/lib/store/useUIStore";
 import { useNotificationStore } from "@/lib/store/useNotificationStore";
 
 interface ModalProps {
@@ -28,6 +29,7 @@ export const ItemModal = ({ item, restaurant, isOpen, onClose }: ModalProps) => 
   const [quantity, setQuantity] = useState(1);
   const [options, setOptions] = useState<Record<string, string | string[]>>({});
   const { addItem, activeRestaurantId, clearCart } = useCartStore();
+  const { setCartOpen } = useUIStore();
   const { addNotification } = useNotificationStore();
 
   useEffect(() => {
@@ -55,6 +57,7 @@ export const ItemModal = ({ item, restaurant, isOpen, onClose }: ModalProps) => 
 
     if (result.success) {
       addNotification(`Added ${quantity}x ${item.name} to cart`);
+      setCartOpen(true);
       onClose();
     } else {
       // Trigger "Clear Cart" Guard logic
@@ -62,6 +65,7 @@ export const ItemModal = ({ item, restaurant, isOpen, onClose }: ModalProps) => 
         clearCart();
         addItem(cartItem);
         addNotification(`Cart cleared and ${item.name} added`);
+        setCartOpen(true);
         onClose();
       }
     }

@@ -113,7 +113,7 @@ interface UIState {
 - **Complexity**: Next.js 14 learning curve for server/client components. *Mitigation*: Strict use of `'use client'` where interactivity (Framer/Zustand) is needed.
 - **Assets**: Video background performance. *Mitigation*: Ensure video is muted, optimized, and has a fallback static image.
 
-## Evaluation & Validation
-- [ ] Responsive check (375px to 1440px).
-- [ ] Lighthouse score > 90 for Performance and Accessibility.
-- [ ] Type-check passes (`tsc`).
+## 6. Definition of Done
+- [x] Responsive check (375px to 1440px).
+- [x] Lighthouse score > 90 for Performance and Accessibility.
+- [x] Type-check passes (`tsc`).

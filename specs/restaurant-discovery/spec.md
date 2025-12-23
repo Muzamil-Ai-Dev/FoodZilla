@@ -55,8 +55,8 @@ Manage how users find restaurants and browse menus. This includes the main listi
 - **MenuItem**: `{ id, name, description, price, image, options? }`
 
 ## 4. Acceptance Criteria
-- [ ] `/restaurants` displays a grid of mock restaurants.
-- [ ] Filtering updates the list (client-side filtering).
-- [ ] Clicking a restaurant navigates to `/restaurant/[slug]`.
-- [ ] Restaurant page shows menu categories and items.
-- [ ] Clicking an item opens the detail modal.
+- [x] `/restaurants` displays a grid of mock restaurants.
+- [x] Filtering updates the list (client-side filtering).
+- [x] Clicking a restaurant navigates to `/restaurant/[slug]`.
+- [x] Restaurant page shows menu categories and items.
+- [x] Clicking an item opens the detail modal.

@@ -49,8 +49,8 @@
 - **Mitigation:** Centralize all logic in the Zustand store and use custom hooks where needed.
 
 ## 6. Definition of Done
-- [ ] Cart Drawer opens/closes with items correctly listed.
-- [ ] Quantity adjustments update totals immediately.
-- [ ] Checkout page validates required selections.
-- [ ] "Place Order" clears the cart and redirects to success page.
-- [ ] Persistence verified after refresh.
+- [x] Cart Drawer opens/closes with items correctly listed.
+- [x] Quantity adjustments update totals immediately.
+- [x] Checkout page validates required selections.
+- [x] "Place Order" clears the cart and redirects to success page.
+- [x] Persistence verified after refresh.

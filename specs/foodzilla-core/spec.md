@@ -63,9 +63,9 @@ Establish the foundational architecture of the FoodZilla frontend application. T
 3.  **Layout**: Implement RootLayout, Header, Footer.
 4.  **Pages**: Build Home (`page.tsx`), Auth pages (`(auth)/login/page.tsx`), Account shell.
 
-## 5. Acceptance Criteria
-- [ ] Project builds with `npm run build` without errors.
-- [ ] Home page displays Hero video and responsive navigation.
-- [ ] Clicking "Login" navigates to `/login`.
-- [ ] "Logging in" updates the Header to show User Avatar instead of "Log in".
-- [ ] Mobile view shows appropriate navigation (Hamburger or Bottom bar).
+## 4. Acceptance Criteria
+- [x] Project builds with `npm run build` without errors.
+- [x] Home page displays Hero video and responsive navigation.
+- [x] Clicking "Login" navigates to `/login`.
+- [x] "Logging in" updates the Header to show User Avatar instead of "Log in".
+- [x] Mobile view shows appropriate navigation (Hamburger or Bottom bar).

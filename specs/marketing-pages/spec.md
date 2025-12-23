@@ -56,8 +56,8 @@ Implement a comprehensive set of static and semi-dynamic marketing pages to supp
 - **Animation**: Framer Motion for fade-ins and smooth transitions.
 - **Data**: Mock data files in `src/lib/mock-data.ts` or local constants.
 
-## 5. Acceptance Criteria
-- [ ] All pages are accessible via URL.
-- [ ] Responsive design works on mobile and desktop.
-- [ ] Navigation links in Footer are updated to point to these new pages.
-- [ ] Placeholder images are used effectively.
+## 4. Acceptance Criteria
+- [x] All pages are accessible via URL.
+- [x] Responsive design works on mobile and desktop.
+- [x] Navigation links in Footer are updated to point to these new pages.
+- [x] Placeholder images are used effectively.

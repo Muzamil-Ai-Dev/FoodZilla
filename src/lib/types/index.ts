@@ -41,3 +41,13 @@ export interface Restaurant {
   tags: string[];
   isPromoted?: boolean;
 }
+
+export interface Order {
+  id: string;
+  restaurantName: string;
+  restaurantImage: string;
+  date: string;
+  total: number;
+  status: 'delivered' | 'processing' | 'cancelled';
+  items: { name: string; quantity: number; price: number }[];
+}

@@ -280,3 +280,42 @@ export const MOCK_RESTAURANTS_EXTENDED: RestaurantExtended[] = MOCK_RESTAURANTS.
     }
   ]
 }));
+
+export const MOCK_ORDERS: any[] = [
+  {
+    id: "FZ-829374",
+    restaurantName: "Burger King",
+    restaurantImage: getMockImage("restaurant", "small"),
+    date: "Dec 20, 2025",
+    total: 24.50,
+    status: 'delivered',
+    items: [
+      { name: "Signature Burger", quantity: 1, price: 12.99 },
+      { name: "Crispy Fries", quantity: 2, price: 4.50 }
+    ]
+  },
+  {
+    id: "FZ-128374",
+    restaurantName: "Sushi Master",
+    restaurantImage: getMockImage("sushi", "small"),
+    date: "Dec 18, 2025",
+    total: 45.00,
+    status: 'cancelled',
+    items: [
+      { name: "Dragon Roll", quantity: 2, price: 18.00 },
+      { name: "Miso Soup", quantity: 1, price: 4.00 }
+    ]
+  },
+  {
+    id: "FZ-992834",
+    restaurantName: "Pizza Hut",
+    restaurantImage: getMockImage("pizza", "small"),
+    date: "Dec 22, 2025",
+    total: 32.99,
+    status: 'processing',
+    items: [
+      { name: "Pepperoni Feast", quantity: 1, price: 22.99 },
+      { name: "Garlic Bread", quantity: 1, price: 5.00 }
+    ]
+  }
+];
