@@ -52,6 +52,8 @@ export default function ZillaAdsPage() {
                   alt="FoodZilla Ads Dashboard"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-1000"
+                  priority
+                  unoptimized
                />
                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent flex items-end justify-center p-12">
                   <div className="text-white space-y-4">
@@ -167,6 +169,8 @@ export default function ZillaAdsPage() {
                       alt="Advertising Analytics Dashboard"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-1000"
+                      priority
+                      unoptimized
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent" />
                     

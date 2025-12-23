@@ -206,6 +206,8 @@ export default function PartnerPage() {
                       alt="Restaurant Management Tablet"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-1000"
+                      priority
+                      unoptimized
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent" />
                     

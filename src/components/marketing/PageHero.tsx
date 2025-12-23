@@ -19,6 +19,8 @@ export const PageHero = ({ title, subtitle, backgroundImage, centered = true }: 
           fill
           className="object-cover"
           priority
+          unoptimized
+          sizes="100vw"
         />
       </div>
       <Container className={`relative z-20 text-white w-full ${centered ? "text-center" : "text-left"}`}>
