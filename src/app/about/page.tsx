@@ -68,25 +68,25 @@ export default function AboutPage() {
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <FadeIn delay={0.1}>
-              <div className="group bg-gray-50 rounded-[3rem] p-10 hover:bg-brand-primary transition-all duration-500 hover:-translate-y-2">
+            <FadeIn delay={0.1} className="h-full">
+              <div className="group bg-gray-50 rounded-[3rem] p-10 hover:bg-brand-primary transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
                 <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
                   <TrendingUp className="w-8 h-8 text-brand-primary" />
                 </div>
                 <h3 className="text-3xl font-black text-brand-dark mb-4 group-hover:text-white transition-colors uppercase italic">Hyper-Local Growth</h3>
-                <p className="text-gray-500 text-lg leading-relaxed group-hover:text-white/90 transition-colors">
+                <p className="text-gray-500 text-lg leading-relaxed group-hover:text-white/90 transition-colors flex-1">
                   We empower local restaurants to reach new customers and grow their business online. By providing the tools and logistics, we allow them to focus on what they do best: cooking incredible food.
                 </p>
               </div>
             </FadeIn>
             
-            <FadeIn delay={0.2}>
-              <div className="group bg-gray-50 rounded-[3rem] p-10 hover:bg-brand-primary transition-all duration-500 hover:-translate-y-2">
+            <FadeIn delay={0.2} className="h-full">
+              <div className="group bg-gray-50 rounded-[3rem] p-10 hover:bg-brand-primary transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
                 <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
                   <Users className="w-8 h-8 text-brand-primary" />
                 </div>
                 <h3 className="text-3xl font-black text-brand-dark mb-4 group-hover:text-white transition-colors uppercase italic">Customer Obsession</h3>
-                <p className="text-gray-500 text-lg leading-relaxed group-hover:text-white/90 transition-colors">
+                <p className="text-gray-500 text-lg leading-relaxed group-hover:text-white/90 transition-colors flex-1">
                   Every feature we build and every delivery we make is centered around the user. We strive for a seamless, joyful experience from the first click to the final bite.
                 </p>
               </div>
@@ -208,7 +208,7 @@ export default function AboutPage() {
       <FadeIn>
         <ContentSection
           title="Our Mission"
-          description="To create a world where eating well is effortless. We believe in speed, quality, and sustainability. That's why we're committed to 100% carbon-neutral deliveries by 2028."
+          description="To create a world where eating well is effortless. We believe in speed, quality, and sustainability. That&apos;s why we&apos;re committed to 100% carbon-neutral deliveries by 2028."
           image="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800"
           imageAlt="Sustainable food packaging"
           reverse
