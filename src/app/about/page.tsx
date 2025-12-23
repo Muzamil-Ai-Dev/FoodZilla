@@ -154,7 +154,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Core Values (Moved and updated) */}
+      {/* Core Values */}
+      <section className="py-24">
         <Container>
            <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
