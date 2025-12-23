@@ -4,22 +4,42 @@ import { Container } from "@/components/ui/container";
 import { FadeIn } from "@/components/ui/fade-in";
 import Image from "next/image";
 import Link from "next/link";
-import { Globe, Utensils, Smartphone, Building2, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+import { CategoryGrid } from "@/components/features/home/CategoryGrid";
+import { DealsSection } from "@/components/features/home/DealsSection";
 
 export default function Home() {
-  const cities = [
-    "Islamabad", "Karachi", "Lahore", "Faisalabad", "Rawalpindi", "Multan", 
-    "Hyderabad", "Gujranwala", "Peshawar", "Quetta", "Sargodha", "Sialkot",
-    "Bahawalpur", "Sukkur", "Jhang", "Sheikhupura", "Larkana", "Gujrat",
-    "Mardan", "Kasur", "Rahim Yar Khan", "Sahiwal", "Okara", "Wah Cantonment"
+  const popularLocations = [
+    { 
+      name: "Oxford Street, London", 
+      image: "https://images.pexels.com/photos/7245239/pexels-photo-7245239.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    },
+    { 
+      name: "Baker Street, London", 
+      image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=600" 
+    },
+    { 
+      name: "Piccadilly Circus, London", 
+      image: "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?auto=format&fit=crop&q=80&w=600" 
+    },
+    { 
+      name: "King's Cross Station, London", 
+      image: "https://images.pexels.com/photos/1427579/pexels-photo-1427579.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    }
   ];
 
   return (
     <div className="flex flex-col bg-white">
       {/* 1. Hero Section (Location Search) */}
       <Hero />
+
+      {/* 2. Categories Section (Foodpanda Style) */}
+      <CategoryGrid />
+
+      {/* 3. Deals Section */}
+      <DealsSection />
       
-      {/* 2. Restaurant Partner Section */}
+      {/* 4. Restaurant Partner Section */}
       <section className="py-24 bg-white overflow-hidden">
         <Container>
           <div className="flex flex-col lg:flex-row items-center gap-16 md:gap-24">
@@ -61,19 +81,31 @@ export default function Home() {
         <Container>
            <FadeIn>
              <h2 className="text-4xl md:text-5xl font-black text-brand-dark mb-16 italic uppercase tracking-tighter text-center">
-                Find us in these <span className="text-brand-primary">cities</span> and many more!
+                Find us in these <span className="text-brand-primary">popular locations</span> and many more!
              </h2>
-             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                {cities.map((city) => (
+             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                {popularLocations.map((location) => (
                   <Link 
-                    key={city} 
-                    href={`/search?city=${city.toLowerCase()}`}
-                    className="group flex flex-col items-center p-8 rounded-[3rem] bg-white hover:bg-brand-primary transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1"
+                    key={location.name} 
+                    href={`/search?q=${location.name.toLowerCase()}`}
+                    className="group flex flex-col items-center rounded-[2rem] bg-white hover:bg-white transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden h-[300px] relative"
                   >
-                     <div className="w-14 h-14 bg-brand-primary/5 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-white transition-colors">
-                        <Globe className="w-7 h-7 text-brand-primary" />
+                     <Image 
+                        src={location.image}
+                        alt={location.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                        unoptimized
+                     />
+                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                     <div className="absolute bottom-0 left-0 right-0 p-8">
+                        <span className="font-black text-white text-xl uppercase italic tracking-tight leading-none">
+                          {location.name.split(',')[0]}
+                          <span className="block text-sm font-bold text-brand-primary mt-1 not-italic tracking-wide font-sans">
+                            {location.name.split(',')[1]}
+                          </span>
+                        </span>
                      </div>
-                     <span className="font-black text-brand-dark group-hover:text-white transition-colors text-center uppercase italic text-sm tracking-tight">{city}</span>
                   </Link>
                 ))}
              </div>
