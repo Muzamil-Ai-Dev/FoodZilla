@@ -261,7 +261,7 @@ export default function AboutPage() {
                  Ready to Join the Revolution?
                </h2>
                <p className="text-xl text-gray-300">
-                 Whether you're a foodie, a rider, or a restaurant owner, there's a place for you at FoodZilla.
+                 Whether you&apos;re a foodie, a rider, or a restaurant owner, there&apos;s a place for you at FoodZilla.
                </p>
                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                   <Link href="/careers">
